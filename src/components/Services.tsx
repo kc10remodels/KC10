@@ -74,11 +74,11 @@ export default function Services() {
             What We Do
           </p>
           <h2 className="reveal delay-100 font-bold text-[#0d1e47] mb-6" style={{ fontSize: "clamp(2.2rem,4vw,3.25rem)", letterSpacing: "-0.02em" }}>
-            Services Built for
-            <span className="block text-[#2324cc]">Every Home, Every Vision.</span>
+            Everything Your DFW Home
+            <span className="block text-[#2324cc]">Needs, Done Right.</span>
           </h2>
           <p className="reveal delay-200 text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed">
-            From quick refreshes to full transformations, our team delivers results that exceed expectations — on time, on budget, on point.
+            No shortcuts, no surprises. Just honest work and quality results for DFW homeowners and property managers.
           </p>
         </div>
 
@@ -173,14 +173,14 @@ export default function Services() {
         {/* CTA strip */}
         <div className="reveal delay-300 mt-16 bg-gradient-to-r from-[#0d1e47] to-[#2324cc] rounded-2xl p-10 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <h3 className="text-white font-bold text-2xl mb-2">Not sure which service you need?</h3>
-            <p className="text-white/60 text-base">Call us or request a free walkthrough — we'll recommend exactly what your home needs.</p>
+            <h3 className="text-white font-bold text-2xl mb-2">Not sure where to start?</h3>
+            <p className="text-white/60 text-base">We're happy to help — same day response, no pressure, no obligation.</p>
           </div>
           <a
-            href="#contact"
+            href="tel:4697989325"
             className="shrink-0 px-8 py-4 bg-[#fdb822] hover:bg-[#e05e00] text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-glow-orange hover:-translate-y-0.5 whitespace-nowrap"
           >
-            Book Free Walkthrough
+            Call Now
           </a>
         </div>
       </div>

@@ -3,10 +3,10 @@
 import { useEffect, useRef } from "react";
 
 const stats = [
-  { value: "500+", label: "Homes Painted" },
-  { value: "15+", label: "Years Experience" },
-  { value: "100%", label: "Satisfaction Rate" },
-  { value: "48hr", label: "Avg. Response Time" },
+  { value: "110+", label: "Homes Painted" },
+  { value: "Same Day", label: "Response Time" },
+  { value: "5 Stars", label: "on Google" },
+  { value: "DFW", label: "Local & Proud" },
 ];
 
 export default function Hero() {
@@ -62,7 +62,7 @@ export default function Hero() {
 
             {/* Sub */}
             <p className="reveal delay-200 text-white/65 text-lg leading-relaxed mb-10 max-w-md">
-              Precision craftsmanship, premium materials, and a crew that treats your home like their own. From curb to crown — we cover it all.
+              Residential painting, drywall repairs, water damage restoration, and make-ready services for DFW homeowners, landlords, and property managers. Done right, on time, every time.
             </p>
 
             {/* CTAs */}
