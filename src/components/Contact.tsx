@@ -47,14 +47,14 @@ export default function Contact() {
   return (
     <section id="contact" ref={sectionRef} className="py-28 bg-[#0d1e47] relative overflow-hidden clip-diagonal">
       {/* Decorative orbs */}
-      <div className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full bg-[#1a3a8f]/40 blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-[#f56a00]/10 blur-[100px] pointer-events-none" />
+      <div className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full bg-[#2324cc]/40 blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-[#fdb822]/10 blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left: copy */}
           <div>
-            <p className="reveal text-[#f56a00] font-semibold text-sm tracking-widest uppercase mb-5">Get In Touch</p>
+            <p className="reveal text-[#fdb822] font-semibold text-sm tracking-widest uppercase mb-5">Get In Touch</p>
             <h2 className="reveal delay-100 font-bold text-white mb-6" style={{ fontSize: "clamp(2.2rem,4vw,3.25rem)", letterSpacing: "-0.02em" }}>
               Let's Paint
               <br />
@@ -74,7 +74,7 @@ export default function Contact() {
                     </svg>
                   ),
                   label: "Call or Text",
-                  value: "(555) 123-4567",
+                  value: "(469) 798-9325",
                 },
                 {
                   icon: (
@@ -83,7 +83,7 @@ export default function Contact() {
                     </svg>
                   ),
                   label: "Email Us",
-                  value: "hello@kc10painting.com",
+                  value: "kc10remodels@gmail.com",
                 },
                 {
                   icon: (
@@ -92,11 +92,11 @@ export default function Contact() {
                     </svg>
                   ),
                   label: "Business Hours",
-                  value: "Mon – Sat: 7am – 6pm",
+                  value: "Mon – Sat: 8am – 6pm",
                 },
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-4">
-                  <div className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center text-[#f56a00] shrink-0">
+                  <div className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center text-[#fdb822] shrink-0">
                     {item.icon}
                   </div>
                   <div>
@@ -109,9 +109,20 @@ export default function Contact() {
 
             {/* Service area note */}
             <div className="reveal delay-400 mt-10 p-5 rounded-xl bg-white/5 border border-white/10">
-              <p className="text-white/60 text-sm leading-relaxed">
-                <span className="text-[#f56a00] font-semibold">Service area:</span> We serve homeowners within a 40-mile radius. Call to confirm your location — we'll always try to accommodate.
+              <p className="text-white/60 text-sm leading-relaxed mb-3">
+                <span className="text-[#fdb822] font-semibold">Proudly serving the Dallas-Fort Worth Metroplex:</span>
               </p>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "Dallas", "Fort Worth", "Irving", "Arlington", "Garland",
+                  "Mesquite", "Richardson", "Lewisville", "Addison", "Coppell",
+                  "Rowlett", "Rockwall", "Balch Springs"
+                ].map((city) => (
+                  <span key={city} className="text-xs font-medium text-white/50 bg-white/8 border border-white/10 px-3 py-1 rounded-full">
+                    {city}, TX
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -120,8 +131,8 @@ export default function Contact() {
             <div className="bg-white rounded-3xl p-8 lg:p-10 shadow-[0_40px_100px_rgba(0,0,0,0.3)]">
               {submitted ? (
                 <div className="text-center py-12">
-                  <div className="w-20 h-20 rounded-full bg-[#1a3a8f]/10 flex items-center justify-center mx-auto mb-6">
-                    <svg className="w-10 h-10 text-[#1a3a8f]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <div className="w-20 h-20 rounded-full bg-[#2324cc]/10 flex items-center justify-center mx-auto mb-6">
+                    <svg className="w-10 h-10 text-[#2324cc]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                     </svg>
                   </div>
@@ -147,7 +158,7 @@ export default function Contact() {
                           value={form.name}
                           onChange={(e) => setForm({ ...form, name: e.target.value })}
                           placeholder="Jane Smith"
-                          className="w-full px-4 py-3 rounded-xl border border-gray-200 text-[#0d1e47] placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1a3a8f]/30 focus:border-[#1a3a8f] transition-all text-sm"
+                          className="w-full px-4 py-3 rounded-xl border border-gray-200 text-[#0d1e47] placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-[#2324cc]/30 focus:border-[#2324cc] transition-all text-sm"
                         />
                       </div>
                       <div>
@@ -159,7 +170,7 @@ export default function Contact() {
                           value={form.phone}
                           onChange={(e) => setForm({ ...form, phone: e.target.value })}
                           placeholder="(555) 000-0000"
-                          className="w-full px-4 py-3 rounded-xl border border-gray-200 text-[#0d1e47] placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1a3a8f]/30 focus:border-[#1a3a8f] transition-all text-sm"
+                          className="w-full px-4 py-3 rounded-xl border border-gray-200 text-[#0d1e47] placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-[#2324cc]/30 focus:border-[#2324cc] transition-all text-sm"
                         />
                       </div>
                     </div>
@@ -174,7 +185,7 @@ export default function Contact() {
                         value={form.email}
                         onChange={(e) => setForm({ ...form, email: e.target.value })}
                         placeholder="jane@example.com"
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 text-[#0d1e47] placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1a3a8f]/30 focus:border-[#1a3a8f] transition-all text-sm"
+                        className="w-full px-4 py-3 rounded-xl border border-gray-200 text-[#0d1e47] placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-[#2324cc]/30 focus:border-[#2324cc] transition-all text-sm"
                       />
                     </div>
 
@@ -185,7 +196,7 @@ export default function Contact() {
                       <select
                         value={form.service}
                         onChange={(e) => setForm({ ...form, service: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 text-[#0d1e47] focus:outline-none focus:ring-2 focus:ring-[#1a3a8f]/30 focus:border-[#1a3a8f] transition-all text-sm bg-white"
+                        className="w-full px-4 py-3 rounded-xl border border-gray-200 text-[#0d1e47] focus:outline-none focus:ring-2 focus:ring-[#2324cc]/30 focus:border-[#2324cc] transition-all text-sm bg-white"
                       >
                         <option value="">Select a service…</option>
                         {services.map((s) => (
@@ -203,13 +214,13 @@ export default function Contact() {
                         value={form.message}
                         onChange={(e) => setForm({ ...form, message: e.target.value })}
                         placeholder="e.g. 3-bedroom house, needs full interior, walls only, neutral tones…"
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 text-[#0d1e47] placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1a3a8f]/30 focus:border-[#1a3a8f] transition-all text-sm resize-none"
+                        className="w-full px-4 py-3 rounded-xl border border-gray-200 text-[#0d1e47] placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-[#2324cc]/30 focus:border-[#2324cc] transition-all text-sm resize-none"
                       />
                     </div>
 
                     <button
                       type="submit"
-                      className="w-full py-4 bg-[#f56a00] hover:bg-[#e05e00] text-white font-bold text-base rounded-xl transition-all duration-300 hover:shadow-glow-orange hover:-translate-y-0.5 active:translate-y-0"
+                      className="w-full py-4 bg-[#fdb822] hover:bg-[#e05e00] text-white font-bold text-base rounded-xl transition-all duration-300 hover:shadow-glow-orange hover:-translate-y-0.5 active:translate-y-0"
                     >
                       Send My Request →
                     </button>

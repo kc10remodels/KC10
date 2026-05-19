@@ -13,7 +13,7 @@ const services = [
     desc: "Flawless finishes on every wall, trim, and ceiling — from bold accent walls to full-home transformations. We prep, protect, and perfect every surface.",
     tag: "Most Popular",
     color: "from-royal-600/20 to-royal-800/10",
-    accent: "#1a3a8f",
+    accent: "#2324cc",
   },
   {
     icon: (
@@ -25,7 +25,7 @@ const services = [
     desc: "Weather-resistant coatings and expert prep work that keeps your home protected and beautiful through every season.",
     tag: null,
     color: "from-orange-500/20 to-orange-700/10",
-    accent: "#f56a00",
+    accent: "#fdb822",
   },
   {
     icon: (
@@ -33,47 +33,11 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42" />
       </svg>
     ),
-    title: "Specialty Finishes",
-    desc: "Faux textures, limewash, venetian plaster, and decorative effects that turn ordinary rooms into showpiece spaces.",
+    title: "Drywall Repairs",
+    desc: "Holes, cracks, water damage, and texture matching — we repair and restore your walls to a seamless, paint-ready finish.",
     tag: "Premium",
     color: "from-royal-600/20 to-orange-500/10",
     accent: "#8B5CF6",
-  },
-  {
-    icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 0 1-2.247 2.118H6.622a2.25 2.25 0 0 1-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
-      </svg>
-    ),
-    title: "Deck & Fence Staining",
-    desc: "UV-resistant stains and sealants that restore and preserve your outdoor wood surfaces for years of beauty.",
-    tag: null,
-    color: "from-green-600/20 to-green-800/10",
-    accent: "#059669",
-  },
-  {
-    icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
-      </svg>
-    ),
-    title: "Cabinet Refinishing",
-    desc: "Give your kitchen or bathroom a luxury upgrade without full replacement — professional spray finishes at a fraction of the cost.",
-    tag: "High ROI",
-    color: "from-yellow-600/20 to-yellow-800/10",
-    accent: "#D97706",
-  },
-  {
-    icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z" />
-      </svg>
-    ),
-    title: "Color Consultation",
-    desc: "Not sure what color? Our certified color consultants will help you find the perfect palette for every room and every mood.",
-    tag: "Free Add-On",
-    color: "from-pink-600/20 to-pink-800/10",
-    accent: "#EC4899",
   },
 ];
 
@@ -100,18 +64,18 @@ export default function Services() {
   return (
     <section id="services" ref={sectionRef} className="py-28 bg-white relative overflow-hidden">
       {/* Decorative bg */}
-      <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-[#f56a00]/5 blur-[80px] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full bg-[#1a3a8f]/5 blur-[60px] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-[#fdb822]/5 blur-[80px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full bg-[#2324cc]/5 blur-[60px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         {/* Header */}
         <div className="text-center mb-20">
-          <p className="reveal inline-block text-[#f56a00] font-semibold text-sm tracking-widest uppercase mb-4">
+          <p className="reveal inline-block text-[#fdb822] font-semibold text-sm tracking-widest uppercase mb-4">
             What We Do
           </p>
           <h2 className="reveal delay-100 font-bold text-[#0d1e47] mb-6" style={{ fontSize: "clamp(2.2rem,4vw,3.25rem)", letterSpacing: "-0.02em" }}>
             Services Built for
-            <span className="block text-[#1a3a8f]">Every Home, Every Vision.</span>
+            <span className="block text-[#2324cc]">Every Home, Every Vision.</span>
           </h2>
           <p className="reveal delay-200 text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed">
             From quick refreshes to full transformations, our team delivers results that exceed expectations — on time, on budget, on point.
@@ -147,7 +111,7 @@ export default function Services() {
                 {s.icon}
               </div>
 
-              <h3 className="relative z-10 font-bold text-[#0d1e47] text-xl mb-3 group-hover:text-[#1a3a8f] transition-colors">
+              <h3 className="relative z-10 font-bold text-[#0d1e47] text-xl mb-3 group-hover:text-[#2324cc] transition-colors">
                 {s.title}
               </h3>
               <p className="relative z-10 text-gray-500 text-sm leading-relaxed">{s.desc}</p>
@@ -169,15 +133,52 @@ export default function Services() {
           ))}
         </div>
 
+        {/* Also Available */}
+        <div className="reveal mt-12">
+          <p className="text-center text-sm font-semibold text-gray-400 uppercase tracking-widest mb-6">Also Available</p>
+          <div className="grid md:grid-cols-3 gap-4">
+            {[
+              {
+                title: "Water Damage Restoration",
+                desc: "Fast response to water-damaged walls and ceilings in Dallas-Fort Worth homes — assessment, repair, and repaint all in one.",
+                icon: (
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 3Z" />
+                  </svg>
+                ),
+              },
+              {
+                title: "Apartment Turns & Make Ready",
+                desc: "Painting, drywall repairs, and full make-ready services between tenants — keeping DFW rental units and homes move-in ready on schedule.",
+                icon: (
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205 3 1m1.5.5-1.5-.5M6.75 7.364V3h-3v18m3-13.636 10.5-3.819" />
+                  </svg>
+                ),
+              },
+            ].map((s, i) => (
+              <div key={i} className={`reveal delay-${(i + 1) * 100} group flex gap-4 bg-[#f8f9fc] hover:bg-white border border-gray-100 hover:border-[#2324cc]/20 rounded-2xl p-6 transition-all duration-300 hover:shadow-card hover:-translate-y-0.5`}>
+                <div className="shrink-0 w-10 h-10 rounded-xl bg-[#2324cc]/10 text-[#2324cc] flex items-center justify-center group-hover:bg-[#2324cc] group-hover:text-white transition-all duration-300">
+                  {s.icon}
+                </div>
+                <div>
+                  <h3 className="font-bold text-[#0d1e47] text-base mb-1">{s.title}</h3>
+                  <p className="text-gray-500 text-sm leading-relaxed">{s.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* CTA strip */}
-        <div className="reveal delay-300 mt-16 bg-gradient-to-r from-[#0d1e47] to-[#1a3a8f] rounded-2xl p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="reveal delay-300 mt-16 bg-gradient-to-r from-[#0d1e47] to-[#2324cc] rounded-2xl p-10 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <h3 className="text-white font-bold text-2xl mb-2">Not sure which service you need?</h3>
             <p className="text-white/60 text-base">Call us or request a free walkthrough — we'll recommend exactly what your home needs.</p>
           </div>
           <a
             href="#contact"
-            className="shrink-0 px-8 py-4 bg-[#f56a00] hover:bg-[#e05e00] text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-glow-orange hover:-translate-y-0.5 whitespace-nowrap"
+            className="shrink-0 px-8 py-4 bg-[#fdb822] hover:bg-[#e05e00] text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-glow-orange hover:-translate-y-0.5 whitespace-nowrap"
           >
             Book Free Walkthrough
           </a>

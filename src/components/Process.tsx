@@ -84,13 +84,13 @@ export default function Process() {
   return (
     <section id="process" ref={sectionRef} className="py-28 bg-[#0d1e47] relative overflow-hidden">
       {/* Decorative */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#1a3a8f]/30 blur-[100px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-[#f56a00]/10 blur-[80px] rounded-full pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#2324cc]/30 blur-[100px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-[#fdb822]/10 blur-[80px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
         {/* Header */}
         <div className="text-center mb-20">
-          <p className="reveal text-[#f56a00] font-semibold text-sm tracking-widest uppercase mb-4">How It Works</p>
+          <p className="reveal text-[#fdb822] font-semibold text-sm tracking-widest uppercase mb-4">How It Works</p>
           <h2 className="reveal delay-100 font-bold text-white mb-6" style={{ fontSize: "clamp(2.2rem,4vw,3.25rem)", letterSpacing: "-0.02em" }}>
             Our 5-Step
             <span className="block gradient-text">Signature Process.</span>
@@ -103,7 +103,7 @@ export default function Process() {
         {/* Steps */}
         <div className="relative">
           {/* Vertical line */}
-          <div className="absolute left-8 lg:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#f56a00]/60 via-white/10 to-transparent hidden md:block" />
+          <div className="absolute left-8 lg:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#fdb822]/60 via-white/10 to-transparent hidden md:block" />
 
           <div className="space-y-12">
             {steps.map((step, i) => {
@@ -114,9 +114,9 @@ export default function Process() {
                   <div className={`flex-1 ${isLeft ? "lg:text-right" : "lg:text-left"}`}>
                     <div className={`glass rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover:-translate-y-1`}>
                       <div className={`flex items-center gap-3 mb-4 ${isLeft ? "lg:flex-row-reverse" : ""}`}>
-                        <span className="text-[#f56a00]/40 font-black text-5xl leading-none">{step.number}</span>
+                        <span className="text-[#fdb822]/40 font-black text-5xl leading-none">{step.number}</span>
                         <div>
-                          <span className="inline-block text-xs font-semibold text-[#f56a00] bg-[#f56a00]/10 px-3 py-1 rounded-full mb-1">
+                          <span className="inline-block text-xs font-semibold text-[#fdb822] bg-[#fdb822]/10 px-3 py-1 rounded-full mb-1">
                             {step.duration}
                           </span>
                           <h3 className="text-white font-bold text-xl">{step.title}</h3>
@@ -127,7 +127,7 @@ export default function Process() {
                   </div>
 
                   {/* Center circle */}
-                  <div className="relative z-10 hidden lg:flex w-16 h-16 shrink-0 rounded-full bg-[#f56a00] items-center justify-center text-white shadow-glow-orange">
+                  <div className="relative z-10 hidden lg:flex w-16 h-16 shrink-0 rounded-full bg-[#fdb822] items-center justify-center text-white shadow-glow-orange">
                     {step.icon}
                   </div>
 
@@ -143,7 +143,7 @@ export default function Process() {
         <div className="reveal delay-300 text-center mt-20">
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-10 py-5 bg-[#f56a00] hover:bg-[#e05e00] text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:shadow-glow-orange hover:-translate-y-1"
+            className="inline-flex items-center gap-2 px-10 py-5 bg-[#fdb822] hover:bg-[#e05e00] text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:shadow-glow-orange hover:-translate-y-1"
           >
             Begin Your Transformation
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>

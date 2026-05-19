@@ -30,13 +30,12 @@ export default function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-3 group">
-          <span className="w-9 h-9 rounded-lg bg-[#f56a00] flex items-center justify-center text-white font-bold text-sm tracking-tight group-hover:scale-105 transition-transform duration-300">
-            KC10
-          </span>
-          <span className="text-white font-bold text-lg tracking-tight hidden sm:block">
-            Painting Co.
-          </span>
+        <a href="#" className="flex items-center group">
+          <img
+            src="/logo.png.png"
+            alt="KC10 Remodels"
+            className="h-12 w-auto group-hover:scale-105 transition-transform duration-300"
+          />
         </a>
 
         {/* Desktop links */}
@@ -48,7 +47,7 @@ export default function Navbar() {
                 className="text-white/70 hover:text-white text-sm font-medium transition-colors duration-200 relative group"
               >
                 {l.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#f56a00] group-hover:w-full transition-all duration-300 rounded-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#fdb822] group-hover:w-full transition-all duration-300 rounded-full" />
               </a>
             </li>
           ))}
@@ -58,7 +57,7 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center gap-4">
           <a
             href="#contact"
-            className="px-5 py-2.5 bg-[#f56a00] hover:bg-[#e05e00] text-white text-sm font-semibold rounded-lg transition-all duration-300 hover:shadow-[0_0_24px_rgba(245,106,0,0.5)] hover:-translate-y-0.5"
+            className="px-5 py-2.5 bg-[#fdb822] hover:bg-[#e05e00] text-white text-sm font-semibold rounded-lg transition-all duration-300 hover:shadow-[0_0_24px_rgba(245,106,0,0.5)] hover:-translate-y-0.5"
           >
             Free Estimate
           </a>
@@ -98,7 +97,7 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={() => setMenuOpen(false)}
-            className="block mt-3 px-4 py-3 bg-[#f56a00] text-white text-center font-semibold rounded-lg"
+            className="block mt-3 px-4 py-3 bg-[#fdb822] text-white text-center font-semibold rounded-lg"
           >
             Free Estimate
           </a>

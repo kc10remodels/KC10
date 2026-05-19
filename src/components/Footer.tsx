@@ -2,13 +2,11 @@ const footerLinks = {
   Services: [
     "Interior Painting",
     "Exterior Painting",
-    "Specialty Finishes",
-    "Deck & Fence Staining",
-    "Cabinet Refinishing",
-    "Color Consultation",
+    "Drywall Repairs",
+    "Water Damage Restoration",
+    "Apartment Turns & Make Ready",
   ],
-  Company: ["About Us", "Our Process", "Portfolio", "Careers", "Blog"],
-  Legal: ["Privacy Policy", "Terms of Service", "License Info"],
+  Company: ["About Us", "Our Process", "Testimonials", "Contact"],
 };
 
 export default function Footer() {
@@ -16,25 +14,27 @@ export default function Footer() {
     <footer className="bg-[#060f24] text-white">
       {/* Main footer */}
       <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-20 pb-12">
-        <div className="grid lg:grid-cols-[2fr_1fr_1fr_1fr] gap-12 mb-16">
+        <div className="grid lg:grid-cols-[2fr_1fr_1fr] gap-12 mb-16">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3 mb-5">
-              <span className="w-10 h-10 rounded-lg bg-[#f56a00] flex items-center justify-center text-white font-bold text-sm">
-                KC10
-              </span>
-              <span className="font-bold text-lg text-white">Painting Co.</span>
+            <div className="mb-5">
+              <img src="/logo.png.png" alt="KC10 Remodels" className="h-14 w-auto" />
             </div>
             <p className="text-white/40 text-sm leading-relaxed max-w-xs mb-6">
               Premium residential painting services. Precision craftsmanship, premium materials, and results that last.
             </p>
             {/* Social */}
             <div className="flex gap-3">
-              {["facebook", "instagram", "houzz"].map((platform) => (
+              {[
+                { id: "facebook", url: "https://www.facebook.com/kc10remodels" },
+                { id: "instagram", url: "https://www.instagram.com/kc10remodels" },
+              ].map(({ id: platform, url }) => (
                 <a
                   key={platform}
-                  href="#"
-                  className="w-9 h-9 rounded-lg bg-white/8 hover:bg-[#f56a00] flex items-center justify-center transition-all duration-300 hover:-translate-y-0.5"
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-lg bg-white/8 hover:bg-[#fdb822] flex items-center justify-center transition-all duration-300 hover:-translate-y-0.5"
                   aria-label={platform}
                 >
                   {platform === "facebook" && (
@@ -45,11 +45,6 @@ export default function Footer() {
                   {platform === "instagram" && (
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                    </svg>
-                  )}
-                  {platform === "houzz" && (
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 0L3 7.2V24h6V14.4h6V24h6V7.2L12 0z" />
                     </svg>
                   )}
                 </a>
@@ -66,7 +61,7 @@ export default function Footer() {
                   <li key={link}>
                     <a
                       href="#"
-                      className="text-white/40 hover:text-white text-sm transition-colors duration-200 hover:text-[#f56a00]"
+                      className="text-white/40 hover:text-white text-sm transition-colors duration-200 hover:text-[#fdb822]"
                     >
                       {link}
                     </a>
@@ -80,17 +75,16 @@ export default function Footer() {
         {/* Badges row */}
         <div className="flex flex-wrap gap-4 mb-12">
           {[
-            "Licensed & Insured",
-            "Sherwin-Williams Certified",
-            "BBB Accredited",
-            "5-Year Warranty",
-            "Background-Checked Crew",
+            "Insured",
+            "Locally Owned & Operated",
+            "Serving Dallas-Fort Worth",
+            "5-Star Rated on Google",
           ].map((badge) => (
             <span
               key={badge}
               className="flex items-center gap-2 text-xs font-medium text-white/40 bg-white/5 border border-white/10 px-4 py-2 rounded-full"
             >
-              <svg className="w-3 h-3 text-[#f56a00]" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="w-3 h-3 text-[#fdb822]" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clipRule="evenodd" />
               </svg>
               {badge}
@@ -101,10 +95,10 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/8 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-white/25 text-sm">
-            © {new Date().getFullYear()} KC10 Painting Co. All rights reserved.
+            © {new Date().getFullYear()} KC10 Remodels & Residential Painting All rights reserved.
           </p>
           <p className="text-white/20 text-xs">
-            Made with care — for every homeowner who deserves better.
+            Proudly serving DFW homeowners, landlords & property managers.
           </p>
         </div>
       </div>

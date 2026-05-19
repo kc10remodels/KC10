@@ -5,8 +5,8 @@
 @tailwind utilities;
 
 :root {
-  --royal: #1a3a8f;
-  --orange: #f56a00;
+  --royal: #2324cc;
+  --orange: #fdb822;
   --white: #ffffff;
 }
 
@@ -32,10 +32,10 @@ body {
 /* ── Custom scrollbar ── */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: #0d1e47; }
-::-webkit-scrollbar-thumb { background: #f56a00; border-radius: 3px; }
+::-webkit-scrollbar-thumb { background: #fdb822; border-radius: 3px; }
 
 /* ── Selection color ── */
-::selection { background: #f56a00; color: #ffffff; }
+::selection { background: #fdb822; color: #ffffff; }
 
 /* ── Utility: paint-stroke underline ── */
 .underline-orange {
@@ -49,7 +49,7 @@ body {
   left: 0;
   height: 6px;
   width: 100%;
-  background: #f56a00;
+  background: #fdb822;
   z-index: -1;
   border-radius: 2px;
   transform: skewX(-3deg);
@@ -57,7 +57,7 @@ body {
 
 /* ── Animated gradient text ── */
 .gradient-text {
-  background: linear-gradient(135deg, #f56a00 0%, #ff9c50 50%, #f56a00 100%);
+  background: linear-gradient(135deg, #fdb822 0%, #ff9c50 50%, #fdb822 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -115,4 +115,4 @@ body {
 
 /* ── Swiper overrides ── */
 .swiper-pagination-bullet { background: rgba(255,255,255,0.4) !important; }
-.swiper-pagination-bullet-active { background: #f56a00 !important; }
+.swiper-pagination-bullet-active { background: #fdb822 !important; }

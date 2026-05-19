@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "KC10 Painting Co. | Premium Residential Painting",
+  title: "KC10 Remodels & Residential Painting | Premium Residential Painting",
   description:
-    "Award-winning residential painting services. Transform your home with KC10 Painting Co. — precision craftsmanship, premium materials, and guaranteed results.",
-  keywords: "residential painting, house painting, interior painting, exterior painting, KC10 Painting",
+    "Award-winning residential painting services. Transform your home with KC10 Remodels & Residential Painting — precision craftsmanship, premium materials, and guaranteed results.",
+  keywords: "residential painting, house painting, interior painting, exterior painting, KC10 Remodels & Residential Painting",
   openGraph: {
-    title: "KC10 Painting Co. | Premium Residential Painting",
+    title: "KC10 Remodels & Residential Painting | Premium Residential Painting",
     description: "Transform your home with precision craftsmanship and premium materials.",
     type: "website",
   },

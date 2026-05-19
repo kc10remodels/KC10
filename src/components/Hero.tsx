@@ -21,8 +21,8 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-hero-pattern noise-overlay">
       {/* Decorative orbs */}
-      <div className="absolute top-20 right-0 w-[600px] h-[600px] rounded-full bg-[#1a3a8f]/40 blur-[120px] pointer-events-none" />
-      <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] rounded-full bg-[#f56a00]/10 blur-[100px] pointer-events-none" />
+      <div className="absolute top-20 right-0 w-[600px] h-[600px] rounded-full bg-[#2324cc]/40 blur-[120px] pointer-events-none" />
+      <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] rounded-full bg-[#fdb822]/10 blur-[100px] pointer-events-none" />
       {/* Grid overlay */}
       <div
         className="absolute inset-0 pointer-events-none opacity-[0.04]"
@@ -39,7 +39,7 @@ export default function Hero() {
           <div>
             {/* Badge */}
             <div className="reveal visible inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-8">
-              <span className="w-2 h-2 rounded-full bg-[#f56a00] animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-[#fdb822] animate-pulse" />
               <span className="text-white/80 text-xs font-medium tracking-widest uppercase">
                 Premium Residential Painting
               </span>
@@ -51,14 +51,13 @@ export default function Hero() {
               className="reveal font-bold text-white leading-[1.05] mb-6"
               style={{ fontSize: "clamp(3.2rem, 7vw, 5.5rem)", letterSpacing: "-0.02em" }}
             >
-              We Paint
+              Painting
               <br />
               <span className="relative inline-block">
-                <span className="underline-orange text-white">Homes</span>
+                <span className="underline-orange text-white">Dallas-Fort Worth</span>
               </span>
-              {" "}That
               <br />
-              <span className="gradient-text">Tell Stories.</span>
+              <span className="gradient-text">With Pride.</span>
             </h1>
 
             {/* Sub */}
@@ -70,7 +69,7 @@ export default function Hero() {
             <div className="reveal delay-300 flex flex-wrap gap-4 mb-16">
               <a
                 href="#contact"
-                className="group relative inline-flex items-center gap-2 px-8 py-4 bg-[#f56a00] text-white font-semibold rounded-xl text-base overflow-hidden transition-all duration-300 hover:shadow-glow-orange hover:-translate-y-1"
+                className="group relative inline-flex items-center gap-2 px-8 py-4 bg-[#fdb822] text-white font-semibold rounded-xl text-base overflow-hidden transition-all duration-300 hover:shadow-glow-orange hover:-translate-y-1"
               >
                 <span className="relative z-10">Get Free Estimate</span>
                 <svg className="relative z-10 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
@@ -93,7 +92,7 @@ export default function Hero() {
             <div className="reveal delay-400 flex flex-wrap gap-6">
               {["Licensed & Insured", "5-Year Warranty", "Local Family Business"].map((b) => (
                 <div key={b} className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-[#f56a00] shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-4 h-4 text-[#fdb822] shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clipRule="evenodd" />
                   </svg>
                   <span className="text-white/60 text-sm font-medium">{b}</span>
@@ -106,7 +105,7 @@ export default function Hero() {
           <div className="reveal-right delay-200 relative lg:block hidden">
             {/* Main image card */}
             <div className="relative rounded-2xl overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.4)]">
-              <div className="aspect-[4/5] bg-gradient-to-br from-[#1a3a8f] via-[#122d6e] to-[#0a1535] relative">
+              <div className="aspect-[4/5] bg-gradient-to-br from-[#2324cc] via-[#122d6e] to-[#0a1535] relative">
                 {/* Simulated painted house illustration */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <HouseIllustration />
@@ -118,7 +117,7 @@ export default function Hero() {
                     <p className="text-white font-semibold text-base">Craftsman Revival — Westside</p>
                     <div className="flex items-center gap-2 mt-2">
                       {[...Array(5)].map((_, i) => (
-                        <svg key={i} className="w-3.5 h-3.5 text-[#f56a00]" fill="currentColor" viewBox="0 0 20 20">
+                        <svg key={i} className="w-3.5 h-3.5 text-[#fdb822]" fill="currentColor" viewBox="0 0 20 20">
                           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 0 0 .95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 0 0-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 0 0-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 0 0-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 0 0 .951-.69l1.07-3.292Z" />
                         </svg>
                       ))}
@@ -131,14 +130,14 @@ export default function Hero() {
 
             {/* Floating stat pill */}
             <div className="absolute -top-6 -left-8 glass rounded-2xl px-6 py-4 shadow-card animate-float">
-              <p className="text-[#f56a00] font-bold text-2xl">500+</p>
+              <p className="text-[#fdb822] font-bold text-2xl">500+</p>
               <p className="text-white/70 text-xs font-medium">Happy Homeowners</p>
             </div>
 
             {/* Floating badge */}
             <div className="absolute -bottom-6 -right-8 glass rounded-2xl px-5 py-4 shadow-card animate-float" style={{ animationDelay: "2s" }}>
               <div className="flex items-center gap-3">
-                <span className="w-10 h-10 rounded-full bg-[#f56a00] flex items-center justify-center">
+                <span className="w-10 h-10 rounded-full bg-[#fdb822] flex items-center justify-center">
                   <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.745 3.745 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.745 3.745 0 0 1 3.296-1.043A3.745 3.745 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.745 3.745 0 0 1 3.296 1.043 3.745 3.745 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
                   </svg>
@@ -156,7 +155,7 @@ export default function Hero() {
         <div className="reveal delay-500 mt-20 grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 rounded-2xl overflow-hidden border border-white/10">
           {stats.map((s, i) => (
             <div key={i} className="bg-white/5 hover:bg-white/10 transition-colors px-8 py-6 text-center">
-              <p className="text-[#f56a00] font-bold text-3xl mb-1 counter-wrapper">{s.value}</p>
+              <p className="text-[#fdb822] font-bold text-3xl mb-1 counter-wrapper">{s.value}</p>
               <p className="text-white/50 text-sm font-medium">{s.label}</p>
             </div>
           ))}
@@ -180,7 +179,7 @@ function HouseIllustration() {
       {/* Sky gradient */}
       <defs>
         <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#1a3a8f" stopOpacity="0" />
+          <stop offset="0%" stopColor="#2324cc" stopOpacity="0" />
           <stop offset="100%" stopColor="#0d1e47" stopOpacity="0.3" />
         </linearGradient>
         <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1">
@@ -188,7 +187,7 @@ function HouseIllustration() {
           <stop offset="100%" stopColor="#ffffff" stopOpacity="0.05" />
         </linearGradient>
         <linearGradient id="roof" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#f56a00" stopOpacity="0.9" />
+          <stop offset="0%" stopColor="#fdb822" stopOpacity="0.9" />
           <stop offset="100%" stopColor="#c25500" stopOpacity="0.8" />
         </linearGradient>
       </defs>

@@ -10,26 +10,26 @@ const config: Config = {
     extend: {
       colors: {
         royal: {
-          DEFAULT: "#1a3a8f",
+          DEFAULT: "#2324cc",
           50: "#e8ecf8",
           100: "#c5d0ee",
           200: "#9db0e2",
           300: "#7490d6",
           400: "#4d70ca",
           500: "#2651be",
-          600: "#1a3a8f",
+          600: "#2324cc",
           700: "#132c6b",
           800: "#0d1e47",
           900: "#060f24",
         },
         orange: {
-          DEFAULT: "#f56a00",
+          DEFAULT: "#fdb822",
           50: "#fff3e8",
           100: "#feddbc",
           200: "#fec490",
           300: "#feab64",
           400: "#fe9238",
-          500: "#f56a00",
+          500: "#fdb822",
           600: "#c25500",
           700: "#8f3f00",
           800: "#5c2900",
@@ -81,7 +81,7 @@ const config: Config = {
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "hero-pattern": "linear-gradient(135deg, #1a3a8f 0%, #0d1e47 60%, #0a1535 100%)",
+        "hero-pattern": "linear-gradient(135deg, #2324cc 0%, #0d1e47 60%, #0a1535 100%)",
         "noise": "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.4'/%3E%3C/svg%3E\")",
       },
       boxShadow: {
