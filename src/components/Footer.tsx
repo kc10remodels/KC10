@@ -6,7 +6,7 @@ const footerLinks = {
     "Water Damage Restoration",
     "Apartment Turns & Make Ready",
   ],
-  Company: ["About Us", "Our Process", "Testimonials", "Contact"],
+  Company: ["About Us", "Testimonials", "Contact"],
 };
 
 export default function Footer() {
