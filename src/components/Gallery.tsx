@@ -91,7 +91,7 @@ const projects = [
     title: "Water Restoration — Step 3",
     category: "Water Restoration",
     location: "Dallas-Fort Worth",
-    caption: "Tape and bed, add texture",
+    caption: "Tape and bed, spray texture",
     image: "/61063.JPG",
     step: 3,
   },

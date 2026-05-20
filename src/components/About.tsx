@@ -2,13 +2,6 @@
 
 import { useEffect, useRef } from "react";
 
-const team = [
-  { name: "Kevin C.", role: "Founder & Lead Painter", years: "15 yrs", initials: "KC" },
-  { name: "Maria L.", role: "Color Consultant", years: "8 yrs", initials: "ML" },
-  { name: "Dave H.", role: "Exterior Specialist", years: "12 yrs", initials: "DH" },
-  { name: "Alex J.", role: "Prep & Finishing Lead", years: "6 yrs", initials: "AJ" },
-];
-
 const values = [
   { label: "Locally Owned", desc: "We're based right here in DFW — no call centers, no middlemen, just your neighbors doing great work." },
   { label: "Quality Craft", desc: "We take pride in every coat, every edge, and every surface we touch." },
@@ -49,15 +42,14 @@ export default function About() {
               <div className="absolute -bottom-16 -left-16 w-48 h-48 rounded-full bg-[#2324cc]/30 blur-2xl" />
 
               <div className="relative z-10">
-                <span className="text-[#fdb822] font-semibold text-sm tracking-widest uppercase">Locally Owned & Operated — DFW</span>
+                <span className="text-[#fdb822] font-semibold text-sm tracking-widest uppercase">Locally Owned & Operated</span>
                 <p className="text-white font-black mt-4 mb-6" style={{ fontSize: "clamp(3rem,6vw,5rem)", lineHeight: "1" }}>
-                  DFW<br />
-                  <span className="text-white/30 font-light text-3xl">proud & local</span>
+                  DFW
                 </p>
                 <div className="grid grid-cols-2 gap-4 mt-8">
                   {[
-                    { n: "500+", l: "Projects" },
-                    { n: "4.9★", l: "Avg. Rating" },
+                    { n: "220+", l: "Projects" },
+                    { n: "5.0★", l: "Avg. Rating" },
                     { n: "$0", l: "Hidden Fees" },
                     { n: "100%", l: "Insured" },
                   ].map((s, i) => (
@@ -70,13 +62,6 @@ export default function About() {
               </div>
             </div>
 
-            {/* Award badge */}
-            <div className="absolute -bottom-6 -right-6 w-28 h-28 rounded-full bg-[#fdb822] flex flex-col items-center justify-center text-white shadow-glow-orange animate-spin-slow">
-              <svg className="w-7 h-7 mb-1" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clipRule="evenodd" />
-              </svg>
-              <span className="font-bold text-xs text-center leading-tight">Top Rated<br />2024</span>
-            </div>
           </div>
 
           {/* Right: copy */}
@@ -84,11 +69,11 @@ export default function About() {
             <p className="reveal text-[#fdb822] font-semibold text-sm tracking-widest uppercase mb-4">Our Story</p>
             <h2 className="reveal delay-100 font-bold text-[#0d1e47] mb-6" style={{ fontSize: "clamp(2.2rem,4vw,3.25rem)", letterSpacing: "-0.02em" }}>
               Locally Owned &
-              <span className="block text-[#2324cc]">DFW Proud.</span>
+              <span className="block text-[#2324cc]">Operated.</span>
             </h2>
             <div className="reveal delay-200 space-y-5 text-gray-500 leading-relaxed">
               <p>
-                KC10 Remodels & Residential Painting is a locally owned and operated business proudly serving the Dallas-Fort Worth Metroplex. We're not a franchise — we're your neighbors, and we treat every home like it's our own.
+                KC10 Remodels & Residential Painting is a locally owned and operated business proudly serving the Dallas-Fort Worth Metroplex. We're your neighbors, and we treat every home like it's our own.
               </p>
               <p>
                 From interior and exterior painting to drywall repairs, water damage restoration, and make-ready services, our experienced crew delivers quality results you can see and trust. We show up on time, communicate clearly, and never cut corners.
@@ -117,19 +102,6 @@ export default function About() {
           </div>
         </div>
 
-        {/* Why local matters */}
-        <div className="reveal grid md:grid-cols-2 gap-6">
-          {[
-            { icon: "📍", title: "Based in DFW", desc: "We live and work right here in the Dallas-Fort Worth Metroplex — no out-of-town crews." },
-            { icon: "⭐", title: "Community Reputation", desc: "Our business grows through referrals and five-star reviews from real DFW homeowners." },
-          ].map((item, i) => (
-            <div key={i} className={`reveal delay-${(i + 1) * 100} text-center p-8 rounded-2xl bg-[#f8f9fc] border border-gray-100`}>
-              <div className="text-4xl mb-4">{item.icon}</div>
-              <h4 className="font-bold text-[#0d1e47] text-lg mb-2">{item.title}</h4>
-              <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );

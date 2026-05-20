@@ -5,10 +5,9 @@ import { useEffect, useRef, useState } from "react";
 const services = [
   "Interior Painting",
   "Exterior Painting",
-  "Specialty Finishes",
-  "Deck & Fence Staining",
-  "Cabinet Refinishing",
-  "Color Consultation",
+  "Drywall Repairs",
+  "Water Damage Restoration",
+  "Apartment Turns & Make Ready",
 ];
 
 export default function Contact() {
@@ -56,12 +55,12 @@ export default function Contact() {
           <div>
             <p className="reveal text-[#fdb822] font-semibold text-sm tracking-widest uppercase mb-5">Get In Touch</p>
             <h2 className="reveal delay-100 font-bold text-white mb-6" style={{ fontSize: "clamp(2.2rem,4vw,3.25rem)", letterSpacing: "-0.02em" }}>
-              Let's Paint
+              Contact Us
               <br />
-              <span className="gradient-text">Your Vision.</span>
+              <span className="gradient-text">Today.</span>
             </h2>
             <p className="reveal delay-200 text-white/55 text-lg leading-relaxed mb-10">
-              Fill out the form and we'll reach out within 48 hours to schedule your free, no-obligation estimate. No sales pressure — just honest advice and a clear quote.
+              Fill out the form and we'll reach out within 16 hours to schedule your free estimate.
             </p>
 
             {/* Contact info */}
@@ -110,13 +109,13 @@ export default function Contact() {
             {/* Service area note */}
             <div className="reveal delay-400 mt-10 p-5 rounded-xl bg-white/5 border border-white/10">
               <p className="text-white/60 text-sm leading-relaxed mb-3">
-                <span className="text-[#fdb822] font-semibold">Proudly serving the Dallas-Fort Worth Metroplex:</span>
+                <span className="text-[#fdb822] font-semibold">Cities We Service:</span>
               </p>
               <div className="flex flex-wrap gap-2">
                 {[
                   "Dallas", "Fort Worth", "Irving", "Arlington", "Garland",
                   "Mesquite", "Richardson", "Lewisville", "Addison", "Coppell",
-                  "Rowlett", "Rockwall", "Balch Springs"
+                  "Rowlett", "Rockwall", "Balch Springs", "Plano"
                 ].map((city) => (
                   <span key={city} className="text-xs font-medium text-white/50 bg-white/8 border border-white/10 px-3 py-1 rounded-full">
                     {city}, TX
@@ -144,7 +143,7 @@ export default function Contact() {
               ) : (
                 <>
                   <h3 className="font-bold text-[#0d1e47] text-2xl mb-2">Request Free Estimate</h3>
-                  <p className="text-gray-400 text-sm mb-8">Response within 48 hours — no obligation.</p>
+                  <p className="text-gray-400 text-sm mb-8">Response within 16 hours.</p>
 
                   <form onSubmit={handleSubmit} className="space-y-5">
                     <div className="grid sm:grid-cols-2 gap-5">
