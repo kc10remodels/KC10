@@ -2,44 +2,107 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const categories = ["All", "Drywall Repair"];
+const categories = ["All", "Painting", "Drywall Repair", "Water Restoration"];
 
 const projects = [
   {
     id: 1,
-    title: "Drywall Repair — Step 1",
-    category: "Drywall Repair",
+    title: "Closet Painting",
+    category: "Painting",
     location: "Dallas-Fort Worth",
-    caption: "Before — assessing the damage",
-    image: "/61061.JPG",
-    size: "large",
+    caption: "Closet painting — Dallas-Fort Worth",
+    image: "/Closet.JPG",
+    step: null,
+  },
+  {
+    id: 9,
+    title: "Painting",
+    category: "Painting",
+    location: "Dallas-Fort Worth",
+    caption: "Closet painting — Dallas-Fort Worth",
+    image: "/M closet.JPG",
+    step: null,
+  },
+  {
+    id: 10,
+    title: "Painting",
+    category: "Painting",
+    location: "Dallas-Fort Worth",
+    caption: "Room painting — Dallas-Fort Worth",
+    image: "/M room.JPG",
+    step: null,
+  },
+  {
+    id: 11,
+    title: "Painting",
+    category: "Painting",
+    location: "Dallas-Fort Worth",
+    caption: "Bathroom painting — Dallas-Fort Worth",
+    image: "/M bathroom.JPG",
+    step: null,
   },
   {
     id: 2,
-    title: "Drywall Repair — Step 2",
+    title: "Drywall Repair",
     category: "Drywall Repair",
     location: "Dallas-Fort Worth",
-    caption: "Patching and prep work",
-    image: "/61062.JPG",
-    size: "small",
+    caption: "Drywall repair — Dallas-Fort Worth",
+    image: "/62061.JPG",
+    step: null,
   },
   {
     id: 3,
-    title: "Drywall Repair — Step 3",
+    title: "Drywall Repair",
     category: "Drywall Repair",
     location: "Dallas-Fort Worth",
-    caption: "Mudding and smoothing",
-    image: "/61063.JPG",
-    size: "small",
+    caption: "Drywall repair — Dallas-Fort Worth",
+    image: "/62062.JPG",
+    step: null,
   },
   {
     id: 4,
-    title: "Drywall Repair — Step 4",
+    title: "Vanity Drywall Repair",
     category: "Drywall Repair",
     location: "Dallas-Fort Worth",
-    caption: "After — seamless finish",
+    caption: "Vanity drywall repair — seamless finish",
+    image: "/vanity drywall repair.JPG",
+    step: null,
+  },
+  {
+    id: 5,
+    title: "Water Restoration — Step 1",
+    category: "Water Restoration",
+    location: "Dallas-Fort Worth",
+    caption: "Assess damage",
+    image: "/61061.JPG",
+    step: 1,
+  },
+  {
+    id: 6,
+    title: "Water Restoration — Step 2",
+    category: "Water Restoration",
+    location: "Dallas-Fort Worth",
+    caption: "Remove affected material, dry and dehumidify",
+    image: "/61062.JPG",
+    step: 2,
+  },
+  {
+    id: 7,
+    title: "Water Restoration — Step 3",
+    category: "Water Restoration",
+    location: "Dallas-Fort Worth",
+    caption: "Tape and bed, add texture",
+    image: "/61063.JPG",
+    step: 3,
+  },
+  {
+    id: 8,
+    title: "Water Restoration — Step 4",
+    category: "Water Restoration",
+    location: "Dallas-Fort Worth",
+    caption: "Prime, paint and add the finishing touches",
     image: "/61064.JPG",
-    size: "large",
+    step: 4,
   },
 ];
 
@@ -105,14 +168,12 @@ export default function Gallery() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           {filtered.map((project, i) => (
             <div
               key={project.id}
-              className={`reveal delay-${(i % 4 + 1) * 100} group relative rounded-2xl overflow-hidden cursor-pointer ${
-                project.size === "large" ? "row-span-2" : ""
-              }`}
-              style={{ minHeight: project.size === "large" ? "420px" : "200px" }}
+              className={`reveal delay-${(i % 4 + 1) * 100} group relative rounded-2xl overflow-hidden cursor-pointer`}
+              style={{ height: "320px" }}
               onMouseEnter={() => setHoveredId(project.id)}
               onMouseLeave={() => setHoveredId(null)}
             >
@@ -131,11 +192,13 @@ export default function Gallery() {
               </div>
 
               {/* Step number */}
-              <div className="absolute top-4 left-4 z-10">
-                <span className="text-xs font-bold bg-[#fdb822] text-white px-3 py-1 rounded-full">
-                  Step {project.id}
-                </span>
-              </div>
+              {project.step && (
+                <div className="absolute top-4 left-4 z-10">
+                  <span className="text-xs font-bold bg-[#fdb822] text-white px-3 py-1 rounded-full">
+                    Step {project.step}
+                  </span>
+                </div>
+              )}
 
               {/* Hover overlay */}
               <div
@@ -143,14 +206,13 @@ export default function Gallery() {
                   hoveredId === project.id ? "opacity-100" : "opacity-0"
                 }`}
               >
-                <p className="text-white font-bold text-lg leading-tight mb-1">{project.title}</p>
-                <p className="text-white/70 text-sm">{project.caption}</p>
+                {project.category !== "Painting" && project.category !== "Drywall Repair" && (
+                  <p className="text-white font-bold text-lg leading-tight mb-1">{project.title}</p>
+                )}
+                {project.category !== "Drywall Repair" && (
+                  <p className="text-white/70 text-sm">{project.caption}</p>
+                )}
               </div>
-
-              {/* Always-visible bottom gradient on large cards */}
-              {project.size === "large" && (
-                <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/40 to-transparent" />
-              )}
             </div>
           ))}
         </div>
