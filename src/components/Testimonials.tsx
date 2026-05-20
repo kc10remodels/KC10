@@ -87,8 +87,8 @@ export default function Testimonials() {
           {/* Star summary */}
           <div className="reveal delay-200 inline-flex items-center gap-3 bg-white border border-gray-100 rounded-full px-6 py-3 shadow-card">
             <StarRating count={5} />
-            <span className="font-bold text-[#0d1e47]">4.9</span>
-            <span className="text-gray-400 text-sm">based on 250+ reviews</span>
+            <span className="font-bold text-[#0d1e47]">5.0</span>
+            <span className="text-gray-400 text-sm">based on Google reviews</span>
           </div>
         </div>
 

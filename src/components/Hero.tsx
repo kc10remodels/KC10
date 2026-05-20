@@ -90,7 +90,7 @@ export default function Hero() {
 
             {/* Trust badges */}
             <div className="reveal delay-400 flex flex-wrap gap-6">
-              {["Licensed & Insured", "5-Year Warranty", "Local Family Business"].map((b) => (
+              {["Insured", "Satisfaction Guarantee", "Local Family Business"].map((b) => (
                 <div key={b} className="flex items-center gap-2">
                   <svg className="w-4 h-4 text-[#fdb822] shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clipRule="evenodd" />
@@ -114,7 +114,7 @@ export default function Hero() {
                 <div className="absolute bottom-6 left-6 right-6">
                   <div className="glass rounded-xl px-5 py-4">
                     <p className="text-white/50 text-xs font-medium uppercase tracking-widest mb-1">Latest Project</p>
-                    <p className="text-white font-semibold text-base">Craftsman Revival — Westside</p>
+                    <p className="text-white font-semibold text-base">Recent Job — Dallas-Fort Worth</p>
                     <div className="flex items-center gap-2 mt-2">
                       {[...Array(5)].map((_, i) => (
                         <svg key={i} className="w-3.5 h-3.5 text-[#fdb822]" fill="currentColor" viewBox="0 0 20 20">
@@ -130,7 +130,7 @@ export default function Hero() {
 
             {/* Floating stat pill */}
             <div className="absolute -top-6 -left-8 glass rounded-2xl px-6 py-4 shadow-card animate-float">
-              <p className="text-[#fdb822] font-bold text-2xl">500+</p>
+              <p className="text-[#fdb822] font-bold text-2xl">220+</p>
               <p className="text-white/70 text-xs font-medium">Happy Homeowners</p>
             </div>
 
@@ -144,7 +144,7 @@ export default function Hero() {
                 </span>
                 <div>
                   <p className="text-white font-semibold text-sm">Certified Pro</p>
-                  <p className="text-white/50 text-xs">Licensed & Insured</p>
+                  <p className="text-white/50 text-xs">Insured</p>
                 </div>
               </div>
             </div>

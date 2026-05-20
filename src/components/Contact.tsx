@@ -137,7 +137,7 @@ export default function Contact() {
                   </div>
                   <h3 className="font-bold text-[#0d1e47] text-2xl mb-3">We got your message!</h3>
                   <p className="text-gray-500 text-base leading-relaxed">
-                    Expect a call or email from us within 48 hours to schedule your free walkthrough. We look forward to working with you!
+                    Expect a call or email from us within 16 hours. We look forward to working with you!
                   </p>
                 </div>
               ) : (

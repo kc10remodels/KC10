@@ -6,7 +6,7 @@ const steps = [
   {
     number: "01",
     title: "Free Consultation",
-    desc: "We come to you — no obligation, no pressure. We assess the scope, listen to your vision, and answer every question you have.",
+    desc: "We come to you — no obligation, no pressure. We walk through the space, talk through what you need, and answer any questions.",
     duration: "Day 1",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
