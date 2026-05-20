@@ -1,23 +1,31 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const links = [
-  { label: "Services", href: "#services" },
-  { label: "Our Work", href: "#gallery" },
-  { label: "About", href: "#about" },
-  { label: "Testimonials", href: "#testimonials" },
+  { label: "Services", href: "/services" },
+  { label: "Our Work", href: "/gallery" },
+  { label: "About", href: "/about" },
+  { label: "Testimonials", href: "/about#testimonials" },
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const isActive = (href: string) => {
+    const base = href.split("#")[0];
+    return base === pathname;
+  };
 
   return (
     <header
@@ -29,37 +37,43 @@ export default function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center group">
+        <Link href="/" className="flex items-center group">
           <img
             src="/logo.png.png"
             alt="KC10 Remodels"
-            className="h-12 w-auto group-hover:scale-105 transition-transform duration-300"
+            className="h-14 lg:h-28 w-auto group-hover:scale-105 transition-transform duration-300"
           />
-        </a>
+        </Link>
 
         {/* Desktop links */}
         <ul className="hidden lg:flex items-center gap-8">
           {links.map((l) => (
             <li key={l.label}>
-              <a
+              <Link
                 href={l.href}
-                className="text-white/70 hover:text-white text-sm font-medium transition-colors duration-200 relative group"
+                className={`text-sm font-medium transition-colors duration-200 relative group ${
+                  isActive(l.href) ? "text-white" : "text-white/70 hover:text-white"
+                }`}
               >
                 {l.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#fdb822] group-hover:w-full transition-all duration-300 rounded-full" />
-              </a>
+                <span
+                  className={`absolute -bottom-1 left-0 h-0.5 bg-[#fdb822] transition-all duration-300 rounded-full ${
+                    isActive(l.href) ? "w-full" : "w-0 group-hover:w-full"
+                  }`}
+                />
+              </Link>
             </li>
           ))}
         </ul>
 
         {/* CTA */}
         <div className="hidden lg:flex items-center gap-4">
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             className="px-5 py-2.5 bg-[#fdb822] hover:bg-[#e05e00] text-white text-sm font-semibold rounded-lg transition-all duration-300 hover:shadow-[0_0_24px_rgba(245,106,0,0.5)] hover:-translate-y-0.5"
           >
             Free Estimate
-          </a>
+          </Link>
         </div>
 
         {/* Mobile burger */}
@@ -84,22 +98,22 @@ export default function Navbar() {
       >
         <div className="bg-[#0d1e47]/98 backdrop-blur-md px-6 pb-6 pt-2 space-y-1">
           {links.map((l) => (
-            <a
+            <Link
               key={l.label}
               href={l.href}
               onClick={() => setMenuOpen(false)}
               className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/5 rounded-lg font-medium transition-colors"
             >
               {l.label}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             onClick={() => setMenuOpen(false)}
             className="block mt-3 px-4 py-3 bg-[#fdb822] text-white text-center font-semibold rounded-lg"
           >
             Free Estimate
-          </a>
+          </Link>
         </div>
       </div>
     </header>

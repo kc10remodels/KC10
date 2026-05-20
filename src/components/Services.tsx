@@ -6,14 +6,46 @@ const services = [
   {
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42" />
       </svg>
     ),
     title: "Interior Painting",
-    desc: "Flawless finishes on every wall, trim, and ceiling — from bold accent walls to full-home transformations. We prep, protect, and perfect every surface.",
-    tag: "Most Popular",
+    desc: "Kitchen, bathrooms, bedrooms, closets, and cabinets.",
     color: "from-royal-600/20 to-royal-800/10",
     accent: "#2324cc",
+  },
+  {
+    icon: (
+      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+      </svg>
+    ),
+    title: "Exterior Painting",
+    desc: "Siding, brick, stucco, fences, and garage doors.",
+    color: "from-orange-500/20 to-orange-700/10",
+    accent: "#fdb822",
+  },
+  {
+    icon: (
+      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z" />
+      </svg>
+    ),
+    title: "Drywall Repairs",
+    desc: "Holes, cracks, texture repairs, mold, and water damage.",
+    color: "from-royal-600/20 to-orange-500/10",
+    accent: "#8B5CF6",
+  },
+  {
+    icon: (
+      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 2.25c0 0-7.5 8.5-7.5 12.75a7.5 7.5 0 0 0 15 0C19.5 10.75 12 2.25 12 2.25Z" />
+      </svg>
+    ),
+    title: "Water Damage Restoration",
+    desc: "Damage assessment, material removal, dehumidifying, mold remediation/prevention, and sheetrock replacement.",
+    color: "from-blue-500/20 to-blue-700/10",
+    accent: "#0ea5e9",
   },
   {
     icon: (
@@ -21,23 +53,10 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205 3 1m1.5.5-1.5-.5M6.75 7.364V3h-3v18m3-13.636 10.5-3.819" />
       </svg>
     ),
-    title: "Exterior Painting",
-    desc: "Weather-resistant coatings and expert prep work that keeps your home protected and beautiful through every season.",
-    tag: null,
-    color: "from-orange-500/20 to-orange-700/10",
-    accent: "#fdb822",
-  },
-  {
-    icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42" />
-      </svg>
-    ),
-    title: "Drywall Repairs",
-    desc: "Holes, cracks, water damage, and texture matching — we repair and restore your walls to a seamless, paint-ready finish.",
-    tag: "Premium",
-    color: "from-royal-600/20 to-orange-500/10",
-    accent: "#8B5CF6",
+    title: "Apartment Turns & Make Ready",
+    desc: "Painting, make ready, and housekeeping.",
+    color: "from-green-500/20 to-green-700/10",
+    accent: "#16a34a",
   },
 ];
 
@@ -92,16 +111,6 @@ export default function Services() {
               {/* Hover gradient */}
               <div className={`absolute inset-0 bg-gradient-to-br ${s.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
 
-              {/* Tag */}
-              {s.tag && (
-                <span
-                  className="relative z-10 inline-block text-xs font-semibold px-3 py-1 rounded-full mb-5"
-                  style={{ backgroundColor: `${s.accent}18`, color: s.accent }}
-                >
-                  {s.tag}
-                </span>
-              )}
-              {!s.tag && <div className="mb-5 h-7" />}
 
               {/* Icon */}
               <div
@@ -116,13 +125,18 @@ export default function Services() {
               </h3>
               <p className="relative z-10 text-gray-500 text-sm leading-relaxed">{s.desc}</p>
 
-              {/* Arrow */}
-              <div className="relative z-10 mt-6 flex items-center gap-2 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0" style={{ color: s.accent }}>
-                Learn more
-                <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+              {/* CTA */}
+              <a
+                href="tel:4697989325"
+                className="relative z-10 mt-6 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0"
+                style={{ backgroundColor: s.accent }}
+                onClick={(e) => e.stopPropagation()}
+              >
+                Get a Free Estimate
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
                 </svg>
-              </div>
+              </a>
 
               {/* Bottom accent */}
               <div
@@ -133,42 +147,6 @@ export default function Services() {
           ))}
         </div>
 
-        {/* Also Available */}
-        <div className="reveal mt-12">
-          <p className="text-center text-sm font-semibold text-gray-400 uppercase tracking-widest mb-6">Also Available</p>
-          <div className="grid md:grid-cols-3 gap-4">
-            {[
-              {
-                title: "Water Damage Restoration",
-                desc: "Fast response to water-damaged walls and ceilings in Dallas-Fort Worth homes — assessment, repair, and repaint all in one.",
-                icon: (
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 3Z" />
-                  </svg>
-                ),
-              },
-              {
-                title: "Apartment Turns & Make Ready",
-                desc: "Painting, drywall repairs, and full make-ready services between tenants — keeping DFW rental units and homes move-in ready on schedule.",
-                icon: (
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205 3 1m1.5.5-1.5-.5M6.75 7.364V3h-3v18m3-13.636 10.5-3.819" />
-                  </svg>
-                ),
-              },
-            ].map((s, i) => (
-              <div key={i} className={`reveal delay-${(i + 1) * 100} group flex gap-4 bg-[#f8f9fc] hover:bg-white border border-gray-100 hover:border-[#2324cc]/20 rounded-2xl p-6 transition-all duration-300 hover:shadow-card hover:-translate-y-0.5`}>
-                <div className="shrink-0 w-10 h-10 rounded-xl bg-[#2324cc]/10 text-[#2324cc] flex items-center justify-center group-hover:bg-[#2324cc] group-hover:text-white transition-all duration-300">
-                  {s.icon}
-                </div>
-                <div>
-                  <h3 className="font-bold text-[#0d1e47] text-base mb-1">{s.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">{s.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
 
         {/* CTA strip */}
         <div className="reveal delay-300 mt-16 bg-gradient-to-r from-[#0d1e47] to-[#2324cc] rounded-2xl p-10 flex flex-col md:flex-row items-center justify-between gap-6">

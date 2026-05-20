@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "KC10 Remodels & Residential Painting | Premium Residential Painting",
@@ -28,7 +30,11 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="font-poppins antialiased">{children}</body>
+      <body className="font-poppins antialiased">
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

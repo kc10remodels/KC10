@@ -1,12 +1,16 @@
 const footerLinks = {
   Services: [
-    "Interior Painting",
-    "Exterior Painting",
-    "Drywall Repairs",
-    "Water Damage Restoration",
-    "Apartment Turns & Make Ready",
+    { label: "Interior Painting", href: "/services" },
+    { label: "Exterior Painting", href: "/services" },
+    { label: "Drywall Repairs", href: "/services" },
+    { label: "Water Damage Restoration", href: "/services" },
+    { label: "Apartment Turns & Make Ready", href: "/services" },
   ],
-  Company: ["About Us", "Testimonials", "Contact"],
+  Company: [
+    { label: "About Us", href: "/about" },
+    { label: "Testimonials", href: "/about#testimonials" },
+    { label: "Contact", href: "/contact" },
+  ],
 };
 
 export default function Footer() {
@@ -56,12 +60,12 @@ export default function Footer() {
               <h4 className="font-bold text-sm tracking-widest uppercase text-white/50 mb-5">{col}</h4>
               <ul className="space-y-3">
                 {links.map((link) => (
-                  <li key={link}>
+                  <li key={link.label}>
                     <a
-                      href="#"
+                      href={link.href}
                       className="text-white/40 hover:text-white text-sm transition-colors duration-200 hover:text-[#fdb822]"
                     >
-                      {link}
+                      {link.label}
                     </a>
                   </li>
                 ))}

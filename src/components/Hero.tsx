@@ -16,6 +16,12 @@ export default function Hero() {
     const el = headlineRef.current;
     if (!el) return;
     el.classList.add("visible");
+    const section = el.closest("section");
+    if (section) {
+      section.querySelectorAll(".reveal, .reveal-right").forEach((node, i) => {
+        setTimeout(() => node.classList.add("visible"), i * 100);
+      });
+    }
   }, []);
 
   return (
@@ -37,27 +43,17 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: Text */}
           <div>
-            {/* Badge */}
-            <div className="reveal visible inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-8">
-              <span className="w-2 h-2 rounded-full bg-[#fdb822] animate-pulse" />
-              <span className="text-white/80 text-xs font-medium tracking-widest uppercase">
-                Premium Residential Painting
-              </span>
-            </div>
-
             {/* Headline */}
             <h1
               ref={headlineRef}
               className="reveal font-bold text-white leading-[1.05] mb-6"
               style={{ fontSize: "clamp(3.2rem, 7vw, 5.5rem)", letterSpacing: "-0.02em" }}
             >
-              Painting
+              <span className="gradient-text">Painting</span>
               <br />
-              <span className="relative inline-block">
-                <span className="underline-orange text-white">Dallas-Fort Worth</span>
-              </span>
+              Dallas-Fort Worth
               <br />
-              <span className="gradient-text">With Pride.</span>
+              With Pride.
             </h1>
 
             {/* Sub */}
@@ -68,7 +64,7 @@ export default function Hero() {
             {/* CTAs */}
             <div className="reveal delay-300 flex flex-wrap gap-4 mb-16">
               <a
-                href="#contact"
+                href="/contact"
                 className="group relative inline-flex items-center gap-2 px-8 py-4 bg-[#fdb822] text-white font-semibold rounded-xl text-base overflow-hidden transition-all duration-300 hover:shadow-glow-orange hover:-translate-y-1"
               >
                 <span className="relative z-10">Get Free Estimate</span>
@@ -78,7 +74,7 @@ export default function Hero() {
                 <span className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
               </a>
               <a
-                href="#gallery"
+                href="/gallery"
                 className="inline-flex items-center gap-2 px-8 py-4 border border-white/25 text-white/90 font-medium rounded-xl text-base hover:bg-white/10 transition-all duration-300"
               >
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -162,13 +158,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-        <span className="text-white/30 text-xs font-medium tracking-widest uppercase">Scroll</span>
-        <svg className="w-4 h-4 text-white/30" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-        </svg>
-      </div>
     </section>
   );
 }
