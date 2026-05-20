@@ -151,8 +151,7 @@ export default function Services() {
         {/* CTA strip */}
         <div className="reveal delay-300 mt-16 bg-gradient-to-r from-[#0d1e47] to-[#2324cc] rounded-2xl p-10 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <h3 className="text-white font-bold text-2xl mb-2">Not sure where to start?</h3>
-            <p className="text-white/60 text-base">We're happy to help — same day response, no pressure, no obligation.</p>
+            <h3 className="text-white font-bold text-2xl">Not sure where to start?</h3>
           </div>
           <a
             href="tel:4697989325"

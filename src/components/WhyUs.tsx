@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 const pillars = [
   {
     icon: "🎯",
-    title: "Precision-First Mindset",
+    title: "Precise Work",
     desc: "We tape every edge and cover every floor before we ever even open a bucket. We take pride in our prep work.",
   },
   {
@@ -15,13 +15,13 @@ const pillars = [
   },
   {
     icon: "⚡",
-    title: "On-Time, Every Time",
+    title: "On Time, Every Time",
     desc: "We give you a real start date and stick to it. Never a no call or no show.",
   },
   {
     icon: "🎨",
     title: "Premium Materials Only",
-    desc: "We use Sherwin-Williams, Benjamin Moore, and PPG. The good stuff holds up.",
+    desc: "We use Sherwin Williams, Benjamin Moore, and PPG. The good stuff holds up.",
   },
   {
     icon: "🏠",
@@ -30,8 +30,8 @@ const pillars = [
   },
   {
     icon: "🌟",
-    title: "Zero-Mess Guarantee",
-    desc: "When we leave, you won't even know we were there — except for the fresh paint.",
+    title: "No Mess Guarantee",
+    desc: "When we leave, you won't even know we were there. Your home will be cleaner than we found it.",
   },
 ];
 

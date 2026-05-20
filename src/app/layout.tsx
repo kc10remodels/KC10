@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import StickyBar from "@/components/StickyBar";
 
 export const metadata: Metadata = {
   title: "KC10 Remodels & Residential Painting | Premium Residential Painting",
@@ -34,6 +35,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <StickyBar />
       </body>
     </html>
   );

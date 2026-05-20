@@ -133,7 +133,7 @@ export default function Gallery() {
   }, []);
 
   return (
-    <section id="gallery" ref={sectionRef} className="py-28 bg-[#f8f9fc] relative overflow-hidden clip-diagonal-reverse">
+    <section id="gallery" ref={sectionRef} className="pt-40 pb-28 bg-[#f8f9fc] relative overflow-hidden clip-diagonal-reverse">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-14">
