@@ -20,10 +20,8 @@ export default function Footer() {
             <div className="mb-5">
               <img src="/logo.png.png" alt="KC10 Remodels" className="h-14 w-auto" />
             </div>
-            <p className="text-white/40 text-sm leading-relaxed max-w-xs mb-6">
-              Premium residential painting services. Precision craftsmanship, premium materials, and results that last.
-            </p>
             {/* Social */}
+            <p className="text-white/40 text-xs font-semibold uppercase tracking-widest mb-3">Follow Us</p>
             <div className="flex gap-3">
               {[
                 { id: "facebook", url: "https://www.facebook.com/kc10remodels" },
@@ -72,33 +70,11 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Badges row */}
-        <div className="flex flex-wrap gap-4 mb-12">
-          {[
-            "Insured",
-            "Locally Owned & Operated",
-            "Serving Dallas-Fort Worth",
-            "5-Star Rated on Google",
-          ].map((badge) => (
-            <span
-              key={badge}
-              className="flex items-center gap-2 text-xs font-medium text-white/40 bg-white/5 border border-white/10 px-4 py-2 rounded-full"
-            >
-              <svg className="w-3 h-3 text-[#fdb822]" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clipRule="evenodd" />
-              </svg>
-              {badge}
-            </span>
-          ))}
-        </div>
 
         {/* Bottom bar */}
         <div className="border-t border-white/8 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-white/25 text-sm">
-            © {new Date().getFullYear()} KC10 Remodels & Residential Painting All rights reserved.
-          </p>
-          <p className="text-white/20 text-xs">
-            Proudly serving DFW homeowners, landlords & property managers.
+            © {new Date().getFullYear()} KC10 LLC. All rights reserved.
           </p>
         </div>
       </div>

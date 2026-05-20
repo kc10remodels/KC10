@@ -225,7 +225,7 @@ export default function Contact() {
                     </button>
 
                     <p className="text-gray-400 text-xs text-center">
-                      No spam. No sales calls. Just a friendly conversation about your project.
+                      We'll never sell your info or spam you.
                     </p>
                   </form>
                 </>
