@@ -33,7 +33,7 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
           ? "bg-[#0d1e47]/95 backdrop-blur-md shadow-lg shadow-black/20 py-3"
-          : "bg-transparent py-6"
+          : "bg-[#0d1e47] py-6"
       }`}
     >
       <nav className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between">
@@ -47,7 +47,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop links */}
-        <ul className="hidden lg:flex items-center gap-8">
+        <ul className="hidden md:flex items-center gap-8">
           {links.map((l) => (
             <li key={l.label}>
               <Link
@@ -68,7 +68,7 @@ export default function Navbar() {
         </ul>
 
         {/* CTA */}
-        <div className="hidden lg:flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-4">
           <Link
             href="/contact"
             className="px-5 py-2.5 bg-[#fdb822] hover:bg-[#e05e00] text-white text-sm font-semibold rounded-lg transition-all duration-300 hover:shadow-[0_0_24px_rgba(245,106,0,0.5)] hover:-translate-y-0.5"
@@ -79,7 +79,7 @@ export default function Navbar() {
 
         {/* Mobile burger */}
         <button
-          className="lg:hidden text-white p-2 rounded-md hover:bg-white/10 transition-colors"
+          className="md:hidden text-white p-2 rounded-md hover:bg-white/10 transition-colors"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -93,7 +93,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       <div
-        className={`lg:hidden overflow-hidden transition-all duration-500 ${
+        className={`md:hidden overflow-hidden transition-all duration-500 ${
           menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >

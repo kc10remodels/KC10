@@ -29,7 +29,7 @@ export default function About() {
   }, []);
 
   return (
-    <section id="about" ref={sectionRef} className="py-28 bg-white relative overflow-hidden">
+    <section id="about" ref={sectionRef} className="pt-48 pb-28 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         {/* Main story block */}
         <div className="grid lg:grid-cols-2 gap-20 items-center mb-24">

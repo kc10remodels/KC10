@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { supabase } from "@/lib/supabase";
 
 const services = [
   "Interior Painting",
@@ -13,6 +14,8 @@ const services = [
 export default function Contact() {
   const sectionRef = useRef<HTMLElement>(null);
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -38,13 +41,30 @@ export default function Contact() {
     return () => observer.disconnect();
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError(null);
+
+    const { error } = await supabase.from("contact_submissions").insert({
+      name: form.name,
+      email: form.email,
+      phone: form.phone || null,
+      service: form.service || null,
+      message: form.message || null,
+    });
+
+    setLoading(false);
+
+    if (error) {
+      setError("Something went wrong. Please try again or call us directly.");
+    } else {
+      setSubmitted(true);
+    }
   };
 
   return (
-    <section id="contact" ref={sectionRef} className="py-28 bg-[#0d1e47] relative overflow-hidden clip-diagonal">
+    <section id="contact" ref={sectionRef} className="pt-48 pb-28 bg-[#0d1e47] relative overflow-hidden clip-diagonal">
       {/* Decorative orbs */}
       <div className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full bg-[#2324cc]/40 blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-[#fdb822]/10 blur-[100px] pointer-events-none" />
@@ -217,11 +237,16 @@ export default function Contact() {
                       />
                     </div>
 
+                    {error && (
+                      <p className="text-red-500 text-sm text-center">{error}</p>
+                    )}
+
                     <button
                       type="submit"
-                      className="w-full py-4 bg-[#fdb822] hover:bg-[#e05e00] text-white font-bold text-base rounded-xl transition-all duration-300 hover:shadow-glow-orange hover:-translate-y-0.5 active:translate-y-0"
+                      disabled={loading}
+                      className="w-full py-4 bg-[#fdb822] hover:bg-[#e05e00] text-white font-bold text-base rounded-xl transition-all duration-300 hover:shadow-glow-orange hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-60 disabled:cursor-not-allowed"
                     >
-                      Send My Request →
+                      {loading ? "Sending…" : "Send My Request →"}
                     </button>
 
                     <p className="text-gray-400 text-xs text-center">

@@ -81,7 +81,7 @@ export default function Services() {
   }, []);
 
   return (
-    <section id="services" ref={sectionRef} className="py-28 bg-white relative overflow-hidden">
+    <section id="services" ref={sectionRef} className="pt-48 pb-28 bg-white relative overflow-hidden">
       {/* Decorative bg */}
       <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-[#fdb822]/5 blur-[80px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full bg-[#2324cc]/5 blur-[60px] pointer-events-none" />

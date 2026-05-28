@@ -72,7 +72,7 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section id="testimonials" ref={sectionRef} className="py-28 bg-[#f8f9fc] relative overflow-hidden">
+    <section id="testimonials" ref={sectionRef} className="pt-48 pb-28 bg-[#f8f9fc] relative overflow-hidden">
       {/* Decorative */}
       <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-[#2324cc]/5 blur-[80px] pointer-events-none" />
 

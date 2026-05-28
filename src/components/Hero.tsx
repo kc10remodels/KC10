@@ -39,10 +39,8 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 pt-32 pb-24">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left: Text */}
-          <div>
+      <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-10 pt-48 pb-24 text-center">
+        <div>
             {/* Headline */}
             <h1
               ref={headlineRef}
@@ -52,17 +50,15 @@ export default function Hero() {
               <span className="gradient-text">Painting</span>
               <br />
               Dallas-Fort Worth
-              <br />
-              With Pride.
             </h1>
 
             {/* Sub */}
-            <p className="reveal delay-200 text-white/65 text-lg leading-relaxed mb-10 max-w-md">
+            <p className="reveal delay-200 text-white/65 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
               Residential painting, drywall repairs, water damage restoration, and make-ready services for DFW homeowners, landlords, and property managers. Done right, on time, every time.
             </p>
 
             {/* CTAs */}
-            <div className="reveal delay-300 flex flex-wrap gap-4 mb-16">
+            <div className="reveal delay-300 flex flex-wrap justify-center gap-4 mb-16">
               <a
                 href="/contact"
                 className="group relative inline-flex items-center gap-2 px-8 py-4 bg-[#fdb822] text-white font-semibold rounded-xl text-base overflow-hidden transition-all duration-300 hover:shadow-glow-orange hover:-translate-y-1"
@@ -85,7 +81,7 @@ export default function Hero() {
             </div>
 
             {/* Trust badges */}
-            <div className="reveal delay-400 flex flex-wrap gap-6">
+            <div className="reveal delay-400 flex flex-wrap justify-center gap-6">
               {["Insured", "Satisfaction Guarantee", "Local Family Business"].map((b) => (
                 <div key={b} className="flex items-center gap-2">
                   <svg className="w-4 h-4 text-[#fdb822] shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -95,56 +91,6 @@ export default function Hero() {
                 </div>
               ))}
             </div>
-          </div>
-
-          {/* Right: Visual card stack */}
-          <div className="reveal-right delay-200 relative lg:block hidden">
-            {/* Main image card */}
-            <div className="relative rounded-2xl overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.4)]">
-              <div className="aspect-[4/5] bg-gradient-to-br from-[#2324cc] via-[#122d6e] to-[#0a1535] relative">
-                {/* Simulated painted house illustration */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <HouseIllustration />
-                </div>
-                {/* Overlay label */}
-                <div className="absolute bottom-6 left-6 right-6">
-                  <div className="glass rounded-xl px-5 py-4">
-                    <p className="text-white/50 text-xs font-medium uppercase tracking-widest mb-1">Latest Project</p>
-                    <p className="text-white font-semibold text-base">Recent Job — Dallas-Fort Worth</p>
-                    <div className="flex items-center gap-2 mt-2">
-                      {[...Array(5)].map((_, i) => (
-                        <svg key={i} className="w-3.5 h-3.5 text-[#fdb822]" fill="currentColor" viewBox="0 0 20 20">
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 0 0 .95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 0 0-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 0 0-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 0 0-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 0 0 .951-.69l1.07-3.292Z" />
-                        </svg>
-                      ))}
-                      <span className="text-white/50 text-xs ml-1">5.0 · Just completed</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Floating stat pill */}
-            <div className="absolute -top-6 -left-8 glass rounded-2xl px-6 py-4 shadow-card animate-float">
-              <p className="text-[#fdb822] font-bold text-2xl">220+</p>
-              <p className="text-white/70 text-xs font-medium">Happy Homeowners</p>
-            </div>
-
-            {/* Floating badge */}
-            <div className="absolute -bottom-6 -right-8 glass rounded-2xl px-5 py-4 shadow-card animate-float" style={{ animationDelay: "2s" }}>
-              <div className="flex items-center gap-3">
-                <span className="w-10 h-10 rounded-full bg-[#fdb822] flex items-center justify-center">
-                  <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.745 3.745 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.745 3.745 0 0 1 3.296-1.043A3.745 3.745 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.745 3.745 0 0 1 3.296 1.043 3.745 3.745 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
-                  </svg>
-                </span>
-                <div>
-                  <p className="text-white font-semibold text-sm">Certified Pro</p>
-                  <p className="text-white/50 text-xs">Insured</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Stats bar */}
