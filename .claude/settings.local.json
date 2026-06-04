@@ -8,7 +8,14 @@
       "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 20; \"Status: $\\($r.StatusCode\\)\" } catch { \"Error: $_\" })",
       "Bash(mkdir -p \"C:\\\\Users\\\\kzoll\\\\OneDrive\\\\Desktop\\\\KC10 Painting\\\\.claude\")",
       "mcp__Claude_Preview__preview_start",
-      "PowerShell($proc = Get-NetTCPConnection -LocalPort 3000 -State Listen -ErrorAction SilentlyContinue | Select-Object -ExpandProperty OwningProcess; if \\($proc\\) { Stop-Process -Id $proc -Force; \"Killed PID $proc\" } else { \"Nothing on port 3000\" })"
+      "PowerShell($proc = Get-NetTCPConnection -LocalPort 3000 -State Listen -ErrorAction SilentlyContinue | Select-Object -ExpandProperty OwningProcess; if \\($proc\\) { Stop-Process -Id $proc -Force; \"Killed PID $proc\" } else { \"Nothing on port 3000\" })",
+      "Bash(npx skills *)",
+      "Bash(export PATH=\"$PATH:/c/Program Files/nodejs\")",
+      "Bash(npm install *)",
+      "mcp__0b018e33-ee17-49f5-aefd-cf7d48811986__list_projects",
+      "mcp__0b018e33-ee17-49f5-aefd-cf7d48811986__apply_migration",
+      "mcp__0b018e33-ee17-49f5-aefd-cf7d48811986__execute_sql",
+      "Bash(npm run *)"
     ]
   }
 }
