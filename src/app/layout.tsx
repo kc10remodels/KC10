@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StickyBar from "@/components/StickyBar";
+import ChatBot from "@/components/ChatBot";
 
 export const metadata: Metadata = {
   title: "KC10 Remodels & Residential Painting | Premium Residential Painting",
@@ -40,6 +41,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <StickyBar />
+        <ChatBot />
       </body>
     </html>
   );
